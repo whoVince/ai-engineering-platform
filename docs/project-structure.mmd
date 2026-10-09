@@ -1,0 +1,16 @@
+flowchart TD
+    A[AI Engineering Platform]
+    A --> B[controller]
+    A --> C[service]
+    A --> D[repository]
+    A --> E[entity]
+
+    E --> F[EngineeringProject]
+
+    E --> F[GenerationRun]
+
+    E --> F[GeneratedArtifact]
+
+    E --> F[ReviewDecision]
+
+    E --> F[UsageEstimate]

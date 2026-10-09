@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: AI Engineering Platform
+  profiles:
+    default: local
+  jpa:
+    open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+ai-engineering-platform:
+  persistence:
+    strategy: Relational database with explicit review workflow
+    technologies: PostgreSQL, Flyway
+  security:
+    jwt:
+      issuer: AI Engineering Platform
+      expiration-minutes: 120
+
